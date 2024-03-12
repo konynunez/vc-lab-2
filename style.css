@@ -2,3 +2,13 @@ html {
   height: 100%;
   width: 100%;
 }
+
+h1 {
+
+  color: blueviolet
+}
+
+button {
+  background-color: #328532;
+  color: white;
+}
