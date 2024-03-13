@@ -17,70 +17,46 @@ let = employees = [
    }, 
 ];
 
-function cardId(name){
- let employeeCards = document.getElementById("my-cards");
-  console.log(employeeCards, "string")
-  for (let i = 0; i < employees.length; i++){
-  let name = employees[i];
-  let body = `contact ${employees[i].position} at ${employees[i].email}`
-    let card = `<div class="my-cards">
-    <div class="card-title">${employees[i].name}</div>
-    <div class="card-body">${body}</div>
-    </div>`
-    
-employeeCards.innerHTML += card;
+const myCards = document.getElementById("my-cards");
+
+function createCards() {
+
+  let myCardContent = "";
+
+  for (let i = 0; i < employees.length; i++) {
+
+    myCardContent = myCardContent + ` 
+    <div class="card my-5 ">
+      <div class="card-header">${employees[i].name}</div>
+      <div class="card-body">
+        The email of this employee is ${employees[i].email} and 
+        the job possition is ${employees[i].position}
+      </div>
+    </div> `
+
+  }
+
+  myCards.innerHTML = myCardContent;
+}
+
+createCards();
+
+
+let officeLocations = ["New York", "London", "Paris", "Tokyo", "Sydney"];
   
+const groupList = document.getElementById("groupList");
+
+function createList(){
+
+  let groupListContent = '';
+
+  officeLocations.map( (item)=>{
+
+        groupListContent = groupListContent +  `<li>${item}</li>`;
+
+  });
+
+  groupList.innerHTML = groupListContent;
 }
-}
-
-cardId(employees);
 
 
-
-let offices = {"office1": "New York", "office2": "London", "office3": "Paris"};
-
-const uList = document.querySelector("ul");
-console.log(uList);
-
-const listItems = document.querySelector("li");
-console.log(listItems);
-
-    const btnChange1 = document.getElementById("btnChange1");
-    const myP = document.getElementById("myP");
-  }
-})
-
-
-let reviews = [
-  {
-    "name": "Shirley Williams",
-    "review": "I love this company. Their team is very talented and they are always willing to help me with any questions I have. I highly recommend them!",
-    "rating": 5,
-  },
-  {
-    "name": "Annie Disla",
-    "review": "They never pick up the phone, but they are nice when they do!",
-    "rating": 3,
-  },
-  {
-    "name": "Peter Pan",
-    "review": "Not a good travel agency, beware",
-    "rating": 0,
-  },
-  {
-    "name": "Shirley Williams",
-    "I Liked all the specials and prices, and the tours they offer",
-    "rating": 4,
-  },
-  {
-    "name": "Overall good company and service",
-    "rating": 5,
-  },
-];
-
-function dsplyReviews(rev) {
-  let costumerReview = document.getElementById("reviews");
-  for (let i = 0; i < reviews.length; i++){
-    
-  }
-}

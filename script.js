@@ -2,9 +2,6 @@
 const uList = document.querySelector("ul");
 console.log(uList);
 
-const listItems = document.querySelector("li");
-console.log(listItems);
-
 
 let gitLearn = ["git status", "git add", "git commit -m", "git push"];
 
